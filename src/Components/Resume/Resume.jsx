@@ -1,7 +1,8 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../Header";
-import GitHubCalendar from 'react-github-calendar';
-const Resume = ({ formData }) => {
+import GitHubCalendar from "react-github-calendar";
+import RepoCard from "../RepoCard";
+const Resume = ({ formData, prepos }) => {
   const [GithubData, setGithubData] = useState("");
 
   useEffect(() => {
@@ -25,11 +26,15 @@ const Resume = ({ formData }) => {
         <div className="space-y-4">
           <div className="">
             <div className="flex ">
-            <p className="text-3xl flex justify-between">
-              <div>{formData.name}</div>
-              <img className="h-20 w-20" src={GithubData.avatar_url} alt="github_pfp" />
-              {/* tushar pal */}
-            </p>
+              <p className="text-3xl flex justify-between">
+                <div>{formData.name}</div>
+                <img
+                  className="h-20 w-20"
+                  src={GithubData.avatar_url}
+                  alt="github_pfp"
+                />
+                {/* tushar pal */}
+              </p>
             </div>
             <p className="text-lg">
               {formData.profession}
@@ -65,12 +70,34 @@ const Resume = ({ formData }) => {
           </p>
         </div>
 
+        <div>
+          <h1 className="text-3xl font-bold">Projects</h1>
+          <div>
+            {prepos.map((repo) => (
+              <RepoCard key={repo.id} prepos={repo} />
+            ))}
 
-        <div className="">
-        <GitHubCalendar username="Tusharpal353" />;
+            {/* 
+              {prepos && prepos.length > 0 ? (
+  prepos.map((repo) => (
+    <RepoCard key={repo.id} prepos={repo} />
+  ))
+) : (
+  <p>No repositories to display.</p>
+)}
+
+            
+            
+            
+            */}
+          </div>
         </div>
 
-        <div >
+        <div className="">
+          <GitHubCalendar username="Tusharpal353" />;
+        </div>
+
+        <div>
           <h1 className="text-xl">Experience</h1>
           <div className="flex justify-between">
             <p>Intern</p>

@@ -35,7 +35,7 @@ const Form = ({setFormData}) => {
     e.preventDefault();
     console.log("Form Data Submitted:", LocalFormData);
     setFormData(LocalFormData);
-    navigate('/resume'); 
+    navigate('/selectrepo'); 
     // Here you can add API call or further processing logic
   };
 
