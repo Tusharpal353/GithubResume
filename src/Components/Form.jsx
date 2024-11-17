@@ -43,10 +43,10 @@ const Form = ({setFormData}) => {
     <div>
       <form onSubmit={handleSubmit}>
         <Header />
-        <div className="mx-16 h-full my-4 border border-black bg-slate-400">
+        <div className="mx-16 h-full my-4  ">
           {/* Personal Info Section */}
-          <div className="max-w-3xl mx-auto p-6">
-            <h1 className="text-3xl font-bold mb-6 text-center">Personal Info</h1>
+          <div className="max-w-6xl mx-auto p-6">
+            <h1 className="text-xl font-bold mb-6 text-left">Personal Info</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="space-y-4">
                 <input
@@ -99,14 +99,12 @@ const Form = ({setFormData}) => {
                   onChange={handleInputChange}
                   placeholder="GitHub Username"
                 />
-                <button type="button" onClick={() => console.log("API Call initiated")}>
-                  API Call
-                </button>
+           
               </div>
             </div>
             <textarea
               className="w-full h-32 px-3 py-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-              placeholder="Profile Summary"
+              placeholder="professional Summary"
               name="profileSummary"
               value={LocalFormData.profileSummary}
               onChange={handleInputChange}
@@ -114,8 +112,8 @@ const Form = ({setFormData}) => {
           </div>
 
           {/* Experience Section */}
-          <div className="max-w-3xl mx-auto p-6">
-            <h1 className="text-3xl font-bold mb-6 text-center">Experience</h1>
+          <div className="max-w-6xl mx-auto p-6">
+            <h1 className="text-xl font-bold mb-6 text-left">Experience</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div className="space-y-4">
                 <input
@@ -165,8 +163,8 @@ const Form = ({setFormData}) => {
           </div>
 
           {/* Education Section */}
-          <div className="max-w-3xl mx-auto p-6">
-            <h1 className="text-3xl font-bold mb-6 text-center">Education</h1>
+          <div className="max-w-6xl mx-auto p-6">
+            <h1 className="text-xl font-bold mb-6 text-left">Education</h1>
             <textarea
               className="w-full h-32 px-3 py-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
               name="education"
@@ -177,8 +175,8 @@ const Form = ({setFormData}) => {
           </div>
 
           {/* Skills Section */}
-          <div className="max-w-3xl mx-auto p-6">
-            <h1 className="text-3xl font-bold mb-6 text-center">Skills</h1>
+          <div className="max-w-6xl mx-auto p-6">
+            <h1 className="text-xl font-bold mb-6 text-left">Skills</h1>
             <textarea
               className="w-full h-12 px-3 py-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
               name="skills"

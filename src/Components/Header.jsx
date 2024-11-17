@@ -5,9 +5,9 @@ const Header = () => {
   return (
     <div>
 
-        <div className='flex justify-start py-4 border border-black cursor-pointer' onClick={()=>{navigate("/")}} >
+        <div className='flex justify-start py-4 border border-black cursor-pointer pl-20 font-bold text-xl ' onClick={()=>{navigate("/")}} >
           
-            gitHub resume builder
+            GitHub resume builder
         </div>
     </div>
   )
