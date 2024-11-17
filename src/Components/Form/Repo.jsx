@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Repo = ({ username, setPRepos }) => {
+const Repo = ({ username, setPRepos,formData }) => {
   const [repos, setRepos] = useState([]);
   const [droppedRepos, setDroppedRepos] = useState([]);
   const navigate = useNavigate();
@@ -10,7 +10,9 @@ const Repo = ({ username, setPRepos }) => {
     const fetchRepos = async () => {
       try {
         const response = await fetch(
-          `https://api.github.com/users/tusharpal353/repos`
+          `https://api.github.com/users/${formData.
+            githubUsername
+            }/repos`
         );
         const data = await response.json();
         setRepos(data);
