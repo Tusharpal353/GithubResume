@@ -12,9 +12,9 @@ function App() {
   const [formData, setFormData] = useState(null);
   const [prepos, setPRepos] = useState([]);
 
-  console.log(formData)
+  console.log(formData);
   useEffect(() => {
-    console.log(prepos ,"parent");
+    console.log(prepos, "parent");
   }, [prepos]);
 
   return (
@@ -23,10 +23,15 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Form setFormData={setFormData} />}></Route>
-        <Route path="/resume" element={<Resume formData={formData}  prepos={prepos}/>}></Route>
-        <Route path="/selectrepo" element={<Repo setPRepos={setPRepos}  formData={formData}/>}></Route>
-        <Route path="/gitrepo" element={<RepoCard  Prepos={prepos} />}></Route>
-        
+        <Route
+          path="/resume"
+          element={<Resume formData={formData} prepos={prepos} />}
+        ></Route>
+        <Route
+          path="/selectrepo"
+          element={<Repo setPRepos={setPRepos} formData={formData} />}
+        ></Route>
+        <Route path="/gitrepo" element={<RepoCard prepos={prepos} />}></Route>
       </Routes>
     </BrowserRouter>
     /*   </Provider> */

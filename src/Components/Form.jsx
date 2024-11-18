@@ -122,16 +122,7 @@ const Form = ({setFormData}) => {
            
               </div>
             </div>
-            <div className="flex">
-              <NotebookIcon className="relative right-2 top-1" />
-              <textarea
-                className="w-full h-32 px-3 py-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2  focus:ring-gray-500 focus:border-transparent resize-none"
-                placeholder="professional Summary"
-                name="profileSummary"
-                value={LocalFormData.profileSummary}
-                onChange={handleInputChange}
-              ></textarea>
-            </div>
+           
           </div>
 
           {/* Experience Section */}
@@ -198,7 +189,18 @@ const Form = ({setFormData}) => {
                     placeholder="End Date"
                   />
                 </div>
+                
               </div>
+              <div className="flex">
+              <NotebookIcon className="relative right-2 top-1" />
+              <textarea
+                className="w-full h-32 px-3 py-2 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2  focus:ring-gray-500 focus:border-transparent resize-none"
+                placeholder="professional Summary"
+                name="profileSummary"
+                value={LocalFormData.profileSummary}
+                onChange={handleInputChange}
+              ></textarea>
+            </div>
             </div>
           </div>
 
